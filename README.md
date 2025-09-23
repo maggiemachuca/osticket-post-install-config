@@ -153,10 +153,11 @@ This tutorial outlines the post-install configuration of the open-source help de
 
 - Click the **Access** tab
 - Select **Support** as John's department
-- Select **View only** for John's role
+- Select **All Access** for John's role
 - Click **Create**
   
-<img width="416" height="91" alt="Screenshot 2025-09-22 at 4 26 27 PM" src="https://github.com/user-attachments/assets/a5a89bb3-477b-4d94-9fd2-a2863a9bcba8" />
+<img width="417" height="86" alt="Screenshot 2025-09-23 at 1 43 54 PM" src="https://github.com/user-attachments/assets/75316b7f-be19-47ec-833f-5f50028af654" />
+
 
 
 ## Step 6: Configure our Agents' passwords
