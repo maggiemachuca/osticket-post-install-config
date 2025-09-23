@@ -18,17 +18,21 @@ This tutorial outlines the post-install configuration of the open-source help de
 
 <h2>Post-Install Configuration Objectives</h2>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- Configure a role of **Full Admin** to assign full administrative access to agents who need this role.
+- Configure the department of **System Administrators**
+- Configure the team of **Online Banking**
+- Allow end users to create trouble tickets
+- Configure agents (employees) so that we can assign them to a department
+- Configure agents' passwords
+- Configure end user accounts (customers)
+- Configure our 3 **Service Level Agreements**
+- Configure **help topics** so that our end users can specify their issue(s)
 
 <h2>Configuration Steps</h2>
 
 ## Step 1: Configure Roles
 
-<p>We are going to be using this link to log into our <a href="http://localhost/osTicket/scp/login.php">admin page</a>.</p>
+- We are going to be using this link to log into our <a href="http://localhost/osTicket/scp/login.php">admin page</a>
 - Open this link inside of the machine you configured osTicket on
 - Enter the admin credentials
 
@@ -65,7 +69,7 @@ This tutorial outlines the post-install configuration of the open-source help de
 <img width="205" height="40" alt="Screenshot 2025-09-22 at 3 49 13 PM" src="https://github.com/user-attachments/assets/34510da5-9263-41de-8eed-e70b5063cf46" />
 
 ## Step 2: Configure Departments
-<p>In this step we are going to add a few roles, including: **SysAdmins**</p>
+<p>In this step we are going to add the role of System Administrator</p>
 
 - Next we are going to configure our departments
 - Since we are already in the Admin Panel, go ahead and click **Departments**
@@ -140,21 +144,160 @@ This tutorial outlines the post-install configuration of the open-source help de
 <img width="667" height="286" alt="Screenshot 2025-09-22 at 4 22 01 PM" src="https://github.com/user-attachments/assets/e14b57fe-b414-4cb5-a171-92fd35c6668d" />
 
 
+- Click the **Agents** tab, we are going to create one more Agent
+- Click **Add New Agent**
+- Add the appropriate credentials
+- In my example our Agent will be John Doe
+
+<img width="749" height="343" alt="Screenshot 2025-09-22 at 4 24 56 PM" src="https://github.com/user-attachments/assets/9db877b3-c201-4c66-8619-8a2232b43a0b" />
+
+- Click the **Access** tab
+- Select **Support** as John's department
+- Select **View only** for John's role
+- Click **Create**
+  
+<img width="416" height="91" alt="Screenshot 2025-09-22 at 4 26 27 PM" src="https://github.com/user-attachments/assets/a5a89bb3-477b-4d94-9fd2-a2863a9bcba8" />
+
+
+## Step 6: Configure our Agents' passwords
+
+- Click the **Agents** tab
+- Click **Jane Doe** or whoever your first agent is
+- Click **Set Password**
+- Uncheck this (screenshot below)
+- After unchecking, you should be prompted to type in Jane's password
+
+<img width="303" height="43" alt="Screenshot 2025-09-22 at 4 30 55 PM" src="https://github.com/user-attachments/assets/4b7082cc-1662-4dcd-8881-49bec9394763" />
+
+- Set Jane's password
+- Click **Update**
+
+<img width="645" height="284" alt="Screenshot 2025-09-22 at 4 32 04 PM" src="https://github.com/user-attachments/assets/95a7ec2e-e191-4737-86eb-de2b046b6775" />
+
+- Click on the **Agents** tab
+- We are going to do the same our second agent, **John Doe**
+- Click **Set Password**
+- Uncheck this (screenshot below)
+- After unchecking, you should be prompted to type in John's password
+
+<img width="303" height="43" alt="Screenshot 2025-09-22 at 4 30 55 PM" src="https://github.com/user-attachments/assets/4b7082cc-1662-4dcd-8881-49bec9394763" />
+
+- Set John's password
+- Click **Update**
+
+
+## Step 7: Configure Users (customers)
+
+- Click the **Agent Panel**
+- Click the **Users** tab
+- Click **Add User**
+
+<img width="958" height="339" alt="Screenshot 2025-09-22 at 4 35 52 PM" src="https://github.com/user-attachments/assets/a206a555-3616-4f0b-bb8e-a85f1cdca57d" />
+
+- Enter the name of your user, in my example the user's name is **Karen**
+- Click **Add user**
+
+<img width="640" height="391" alt="Screenshot 2025-09-22 at 4 37 17 PM" src="https://github.com/user-attachments/assets/cde8abcc-86fa-4efe-93b8-33bbbbd3db20" />
+
+
+## Step 8: Configure SLA (Service Level Agreement)
+<p>We are going to create 3 SLA plans each with a different severity.</p>
+<p>Our Sev-A SLA plan will be on a 24/7 schedule to ensure that severe trouble tickets resolved as soon as possible without having to wait for the weekend.</p>
+<p>Our Sev-B SLA plan will also be on a 24/7 schedule to ensure that important trouble tickets get resolved soon. These will be important but not as critical as the Sev-A SLA plan./p>
+<p>Sev-C SLA will be on a normal working schedule, Monday - Friday at business hours for regular trouble tickets.</p>
+
+
+- Click **Admin panel**
+- Click the **Manage** tab
+- Click the **SLA** tab
+- Click **Add New SLA Plan**
+
+<img width="954" height="226" alt="Screenshot 2025-09-22 at 4 42 23 PM" src="https://github.com/user-attachments/assets/e7fbfd7f-4014-49de-b2f1-d7bad1870ee3" />
+
+- Name this SLA **Sev-A**
+- Select **1 hour** for the grace period
+- Select the **24/7** schedule
+- Click **Add Plan**
+
+<img width="640" height="256" alt="Screenshot 2025-09-22 at 4 49 01 PM" src="https://github.com/user-attachments/assets/a537df69-9ce6-4343-8ad1-4d58450a269c" />
+
+- Click **Add New SLA Plan**
+- Name this SLA **Sev-B**
+- Select **4 hours** for the grace period
+- Select the **24/7** schedule
+- Click **Add Plan**
+
+<img width="703" height="258" alt="Screenshot 2025-09-22 at 4 53 08 PM" src="https://github.com/user-attachments/assets/b5e21400-95d1-42be-bdf1-8b4cf32bd99e" />
+
+- Click **Add New SLA Plan**
+- Name this SLA **Sev-C**
+- Select **8 hours** for the grace period
+- Select **Monday - Friday 8am - 5pm with US Holidays**
+- Click **Add Plan**
+
+<img width="733" height="263" alt="Screenshot 2025-09-22 at 4 54 39 PM" src="https://github.com/user-attachments/assets/9570a305-ecd9-4b82-8f93-59fdb104872d" />
 
 
 
+## Step 9: Configure Help Topics
+- In this step we are going to configure a few help topics: 
+  - Business Critical Outage
+  - Personal Computer Issues
+  - Equipment Request
+  - Password Reset
+  - Other
+
+- Since we are already in the Admin Panel, click the **Manage** tab
+- Click the **Help Topics** tab
+- Click **Add New Help Topic**
+
+<img width="995" height="453" alt="Screenshot 2025-09-22 at 4 58 14 PM" src="https://github.com/user-attachments/assets/9c8e90f5-8888-4cef-b46b-1f80222c3a9a" />
+
+- Inside topic, type in **Business Critical Outage**
+- Inside Parent topic, click **Report a Problem**
+- Click **Add Topic**
+
+
+<img width="717" height="482" alt="Screenshot 2025-09-22 at 5 01 20 PM" src="https://github.com/user-attachments/assets/56b193c8-295b-45e6-a903-f3e158b059b6" />
+
+
+- Click the **Help Topics** tab
+- Click **Add New Help Topic**
+- Inside topic, type in **Personal Computer Issues**
+- Inside Parent topic, click **Report a Problem**
+- Click **Add Topic**
+
+<img width="616" height="225" alt="Screenshot 2025-09-22 at 5 04 04 PM" src="https://github.com/user-attachments/assets/39869452-830e-4e2b-8027-40fbe83d9db5" />
+
+- Click the **Help Topics** tab
+- Click **Add New Help Topic**
+- Inside topic, type in **Equipment Request**
+- Inside Parent topic, click **General Inquiry**
+- Click **Add Topic**
+  
+<img width="600" height="192" alt="Screenshot 2025-09-22 at 5 05 59 PM" src="https://github.com/user-attachments/assets/37cb2844-2241-4645-9991-8fbcc6ccce50" />
+
+- Click the **Help Topics** tab
+- Click **Add New Help Topic**
+- Inside topic, type in **Password Reset**
+- Inside Parent topic, click **General Inquiry**
+- Click **Add Topic**
+
+<img width="548" height="133" alt="Screenshot 2025-09-22 at 5 06 47 PM" src="https://github.com/user-attachments/assets/36a91ae6-6d38-43f5-bb35-bae7e0dad281" />
+
+- Click the **Help Topics** tab
+- Click **Add New Help Topic**
+- Inside topic, type in **Other**
+- Inside Parent topic, click **General Inquiry**
+- Click **Add Topic**
+
+<img width="564" height="129" alt="Screenshot 2025-09-22 at 5 07 34 PM" src="https://github.com/user-attachments/assets/9775c342-d991-49be-a1da-cc04d44d0da1" />
 
 
 
-
-
-
-
-
-
-
-
-
+- That's it! We have set up our roles, departments, teams, agents, users, SLAs, and help topics.
+- In the next lab we will be going over **Ticket Lifecycle** using osTicket and the configurations we did in this section.
+- Link to Ticket Lifecycle section (to be added)
 
 
 <br />
